@@ -1,0 +1,54 @@
+
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="card-header">
+        <a href="/alta-alumno"  class="btn btn-primary">Nuevo Alumno</a> 
+      </div>
+        <div class="card-body">
+          <table id="listAlumno" datatable  [dtOptions]="dtOptions"  [dtTrigger]="dtTrigger">
+    <thead>
+      <tr>
+        <th class="th-sm">ID
+  
+        </th>
+        <th class="th-sm">Matricula
+  
+        </th>
+        <th class="th-sm">Nombre
+  
+        </th>
+        <th class="th-sm">Telefono
+  
+        </th>
+        <th class="th-sm">Correo Electronico
+  
+        </th>
+        <th class="th-sm">Fecha Registro
+  
+        </th>
+        <th class="th-sm">Actualizar
+  
+        </th>
+        <th class="th-sm">Borrar
+  
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of data">
+        <td>{{row.id}}</td>
+        <td>{{row.matricula}}</td>
+        <td>{{row.nombre}}</td>
+        <td>{{row.telefono}}</td>
+        <td>{{row.correoelectronico}}</td>
+        <td>{{row.fecharegistro}}</td>
+        <td><a href="" class="btn btn-warning text-white">Editar</a></td>
+        <td><button type="button" class="btn btn-danger" (click)="eliminar(row.id)">Eliminar</button></td>
+      </tr>
+    </tbody>
+          </table>
+        </div>>
+      </div>
+  </div>
+</div>

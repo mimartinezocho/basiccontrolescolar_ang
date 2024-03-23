@@ -1,0 +1,28 @@
+
+<div class="container">
+    <div class="row col-6 mx-auto">
+        <div class="card">
+            <div class="card-body">
+                <h1>{{titulo}}</h1>
+                <form #profesorForm="ngForm"  (ngSubmit)="agregar()">
+                    <div class="col-md-12 mb-2">
+                        <label for="">Clave Materia</label>
+                        <input type="text" name="clavemateria" placeholder="Clave Materia" class="form-control" [(ngModel)]="materia.clavemateria">
+                    </div>
+                    <div class="col-md-12 mb-2">
+                        <label for="">Nombre</label>
+                        <input type="text" name="nombre" placeholder="Nombre" class="form-control" [(ngModel)]="materia.nombre">
+                    </div>
+                    <div class="col-md-12 mb-2">
+                        <label for="">Profesor</label>
+                        <input type="text" name="telefono" placeholder="Telefono" class="form-control" [(ngModel)]="materia.nombreProfesor">
+                    </div>
+    
+                    <div class="d-grid gab-2">
+                        <button type="submit" class="btn btn-primary">Agregar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
